@@ -1,0 +1,15 @@
+training:
+  lr: 0.1
+  weight-decay: 0.0000001
+  bs: 32
+  scheduler: 'steplr'
+  gamma: 0.1
+  step-size: 20
+
+test:
+  bs: 128
+
+model:
+  image-size: 224
+  num-classes: 1
+  
