@@ -141,54 +141,86 @@ if __name__ == "__main__":
         elif opt.model == 3:
             if opt.mode == 0:
                 model = torch.nn.Sequential(torch.nn.Linear(int(1024*dim), 512),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(512, 512),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(512, config['model']['num-classes']))
             else:
                 model = torch.nn.Sequential(torch.nn.Linear(int(2048*dim), 512),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(512, 512),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(512, config['model']['num-classes']))
         elif opt.model == 4:
             if opt.mode == 0:
                 model = torch.nn.Sequential(torch.nn.Linear(int(1024*dim), 512),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(512, 512),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(512, 256),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(256, 256),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(256, config['model']['num-classes']))
             else:
                 model = torch.nn.Sequential(torch.nn.Linear(int(2048*dim), 512),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(512, 512),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(512, 256),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(256, 256),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(256, config['model']['num-classes']))
         elif opt.model == 5:
             if opt.mode == 0:
                 model = torch.nn.Sequential(torch.nn.Linear(int(1024*dim), 4096),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(4096, 4096),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(4096, 1024),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(1024, config['model']['num-classes']))
             else:
                 model = torch.nn.Sequential(torch.nn.Linear(int(2048*dim), 4096),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(4096, 4096),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(4096, 1024),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(1024, config['model']['num-classes']))
         elif opt.model == 6:
             if opt.mode == 0:
                 model = torch.nn.Sequential(torch.nn.Linear(int(1024*dim), 8192),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(8192, 4096),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(4096, 4096),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(4096, 2048),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(2048, 2048),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(2048, 1024),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(1024, 1024),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(1024, config['model']['num-classes']))
             else:
                 model = torch.nn.Sequential(torch.nn.Linear(int(2048*dim), 8192),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(8192, 4096),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(4096, 4096),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(4096, 2048),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(2048, 2048),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(2048, 1024),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(1024, 1024),
+                                            torch.nn.ReLU()
                                             torch.nn.Linear(1024, config['model']['num-classes']))
         elif opt.model == 7:
             model = timm.create_model('xception', pretrained=True)
