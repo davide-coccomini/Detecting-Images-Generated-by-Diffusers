@@ -15,9 +15,9 @@ To train and test a new model it is necessary to generate one synthetic image fo
 - Wikipedia Dataset: https://www.kaggle.com/c/wikipedia-image-caption
 
 Run the following command to start the generation:
-'''
+```
 python3 generate_images.py
-'''
+```
 
 You can customize it with the following parameters:
 - --workers: Number of workers (Default: 100)
@@ -31,7 +31,7 @@ You can customize it with the following parameters:
 - --output_path: Path in which the images should be saved
 
 This should be run for each dataset and for each part of the dataset (train/val/test). The output folders will look like:
-
+```
 - datasets
   - train
       - Prompt 0
@@ -69,14 +69,14 @@ This should be run for each dataset and for each part of the dataset (train/val/
       - ...
       - Prompt N
         - ...
-  
+```
 
 # Training
 
 To train a model on the prepared dataset run the following command:
-'''
+```
 python3 train.py --config path/to/config
-'''
+```
 
 You can customize it with the following parameters:
 - --num_epochs: Number of epochs for training (default: 30)
@@ -100,9 +100,9 @@ You can customize it with the following parameters:
 # Inference
 
 To test a model on the prepared dataset run the following command:
-'''
+```
 python3 test.py --config path/to/config --model_weights path/to/model/weights
-'''
+```
 
 You can customize it with the following parameters:
 - --workers: Number of workers (default: 100)
